@@ -59,16 +59,13 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 120px;
   height: 120px;
-  border-radius: 16px;
-
+  border-radius: 50px;
   font-size: 28px;
   color: white;
   background: rgba(255, 255, 255, 0);
   border: 2px solid white;
-
   cursor: pointer;
   transition: 0.3s ease;
   font-family: "alegreya", sans-serif;
