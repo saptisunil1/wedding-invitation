@@ -2,11 +2,10 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
   overflow: hidden;
   overscroll-behavior: none;
-  background: black;
 }
 
 #root {
@@ -17,16 +16,19 @@ body {
 
 .carousel-wrapper {
   position: relative;
-  width: 100%;
-  height: 100dvh;
+  width: 100vw;
+  /*100% */
+  height: 100vh;
   overflow: hidden;
-  touch-action: pan-y;
+  touch-action: none;
 }
 
 .bordered-img {
   border: 5px solid white;
   border-radius: 4px;
-  width: min(90%, 350px);
+  width: 90%;
+  max-width: 350px;
+  /*width: min(90%, 350px); */
   height: auto;
 }
 
@@ -37,8 +39,9 @@ body {
 .responsive-img {
   border: 5px solid white;
   border-radius: 4px;
-  width: 100%;
   max-width: 350px;
+  width: 90%;
+  /* 100% */
   height: auto;
 }
 
@@ -49,7 +52,6 @@ body {
 
   .responsive-img {
     width: 100vw;
-    height: 100vh;
     height: 100dvh;
     object-fit: cover;
     border: none;
@@ -67,7 +69,7 @@ body {
   border-radius: 50%;
   font-size: 28px;
   color: white;
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
   border: 2px solid white;
   cursor: pointer;
   transition: 0.3s ease;
@@ -86,9 +88,8 @@ body {
   transform: translateX(-50%);
   text-align: center;
   width: 100%;
-  max-width: 100%;
+  /* max-height:100% */
   z-index: 10;
-  padding: 0 12px;
 }
 
 .text-overlay {
@@ -106,81 +107,113 @@ body {
 .p1 {
   font-family: "Great Vibes", cursive;
   color: white;
-  font-size: clamp(32px, 6vw, 48px);
+  font-size: 48px;
   margin: 5px 0;
 }
 
 .p2 {
   font-family: "Alegreya", serif;
   color: white;
-  font-size: clamp(18px, 4.5vw, 28px);
+  font-size: 28px;
   margin-top: 15px;
 }
 
-.p3,
+.p3 {
+  font-family: "Alegreya", serif;
+  color: white;
+  font-size: 30px;
+  margin-top: 15px;
+  font-style: italic;
+}
+
 .p4 {
   font-family: "Alegreya", serif;
   color: white;
-  font-size: clamp(20px, 5vw, 30px);
+  font-size: 28px;
+  margin-top: 15px;
   font-style: italic;
 }
 
 .p5 {
   font-family: "Alegreya", serif;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
+  margin-top: 15px;
 }
 
 .p6 {
   font-family: "Great Vibes", cursive;
   color: white;
   font-size: 32px;
+  margin-top: 15px;
 }
 
 .p7 {
   font-family: "Alegreya", serif;
   color: white;
   font-size: 22px;
+  margin-top: 15px;
 }
 
 .p8 {
   font-family: "allura", serif;
   color: white;
   font-size: 28px;
+  margin-bottom: 50px;
+  margin-top: 15px;
 }
 
-.p9,
-.p10,
-.p11,
+.p9 {
+  font-family: "cormorant", serif;
+  color: white;
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+.p10 {
+  font-family: "cormorant", serif;
+  color: white;
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+.p11 {
+  font-family: "cormorant", serif;
+  color: white;
+  font-size: 25px;
+  margin-top: -20px;
+}
+
 .p12 {
   font-family: "cormorant", serif;
   color: white;
+  font-size: 25px;
+  margin-top: 15px;
 }
 
 .swipe-up {
   position: absolute;
-  bottom: calc(20px + env(safe-area-inset-bottom));
+  bottom: 40px; /*  calc(20px + env(safe-area-inset-bottom)) */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  z-index: 999;
-  pointer-events: none;
+  z-index: 20;
 }
 
 .swipe-text {
-  font-size: clamp(14px, 4vw, 20px);
+  font-size: 25px;
   color: white;
   margin-bottom: 5px;
   font-family: "Alegreya", serif;
 }
 
 .swipe-arrow {
-  font-size: clamp(22px, 6vw, 30px);
+  font-size: 30px;
   color: white;
   animation: bounce 1.2s infinite;
+  opacity: 0.9;
 }
 
 @keyframes bounce {
@@ -189,7 +222,7 @@ body {
   }
 
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
   }
 
   100% {
@@ -199,7 +232,6 @@ body {
 
 .page2-wrapper {
   height: 100vh;
-  height: 100dvh;
   background: black;
   display: flex;
   flex-direction: column;
@@ -207,13 +239,24 @@ body {
   align-items: center;
   color: white;
   text-align: center;
-  padding: 20px;
+}
+
+.page2-wrapper .p1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.page2-wrapper .p2 {
+  font-family: "Alegreya", serif;
+  font-size: 28px;
+  margin: 5px 0;
 }
 
 .location-btn {
-  border-radius: 10px;
+  border-radius: 10%;
   padding: 12px 20px;
-  font-size: 18px;
+  font-size: 20px;
   color: white;
   background: transparent;
   border: 2px solid white;
@@ -245,7 +288,7 @@ body {
   display: inline-block;
   padding: 14px 14px 20px 14px;
   background: white;
-  transform: rotate(-10deg);
+  transform: rotate(-20deg);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
