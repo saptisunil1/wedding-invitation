@@ -9,7 +9,7 @@ import "@fontsource/alegreya";
 function StartPageCarousel({ onStart }) {
     return (
         <div className="carousel-wrapper">
-            <Carousel interval={3000} controls={false} indicators={false} pause={false}>
+            <Carousel interval={3000} controls={false} indicators={false} pause={false} touch={false}>
                 <Carousel.Item>
                     <img className="responsive-img" src={pik1} alt="Slide 1" />
                 </Carousel.Item>

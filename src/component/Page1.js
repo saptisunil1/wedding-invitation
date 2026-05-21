@@ -14,7 +14,7 @@ function Page1() {
 
     return (
         <div className="carousel-wrapper">
-            <Carousel interval={3000} controls={false} indicators={false} pause={false}>
+            <Carousel interval={3000} controls={false} indicators={false} pause={false} touch={false}>
                 <Carousel.Item>
                     <img className="responsive-img" src={pik3} alt="ResponsiveImg1" />
                 </Carousel.Item>
