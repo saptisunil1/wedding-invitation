@@ -63,7 +63,7 @@ function Page1() {
             </Carousel>
             <div className="text-overlay4">
                 <div className="music-icon" onClick={toggleMusic}>
-                    <FaMusic color={isPlaying ? "white" : "gray"} size={50} />
+                    <FaMusic color={isPlaying ? "white" : "gray"} size={30} />
                 </div>
             </div>
 
