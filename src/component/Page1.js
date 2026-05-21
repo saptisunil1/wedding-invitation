@@ -16,13 +16,13 @@ function Page1() {
         <div className="carousel-wrapper">
             <Carousel interval={3000} controls={false} indicators={false} pause={false}>
                 <Carousel.Item>
-                    <img className="responsive-img" src={pik3} />
+                    <img className="responsive-img" src={pik3} alt="ResponsiveImg1" />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className="responsive-img" src={pik9} />
+                    <img className="responsive-img" src={pik9} alt="ResponsiveImg1" />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className="responsive-img" src={pik10} />
+                    <img className="responsive-img" src={pik10} alt="ResponsiveImg1" />
                 </Carousel.Item>
             </Carousel>
 
