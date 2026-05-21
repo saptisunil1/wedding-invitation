@@ -313,8 +313,8 @@ body {
 
 .music-icon {
   position: absolute;
-  bottom: calc(30px + env(safe-area-inset-bottom));
-  left: 30px;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  left: 20px;
   z-index: 99999;
   width: 60px;
   height: 60px;
