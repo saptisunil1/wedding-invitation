@@ -52,13 +52,13 @@ function Page1() {
                 touch={false}
             >
                 <Carousel.Item>
-                    <img className="responsive-img" src={pik3} />
+                    <img className="responsive-img" src={pik3} alt="Img1"/>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className="responsive-img" src={pik9} />
+                    <img className="responsive-img" src={pik9} alt="Img2" />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className="responsive-img" src={pik10} />
+                    <img className="responsive-img" src={pik10} alt="Img3" />
                 </Carousel.Item>
             </Carousel>
             <div className="text-overlay4">
