@@ -1,0 +1,92 @@
+.rsvp-layer {
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.rsvp-premium-card {
+  width: min(360px, 92%);
+  padding: 22px 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  font-family: "Alegreya", serif;
+  color: white;
+}
+
+.rsvp-header h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 44px;
+  margin: 0;
+  text-align: center;
+}
+
+.rsvp-header p {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+.rsvp-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rsvp-premium-card input,
+.rsvp-premium-card textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.rsvp-premium-card input:focus,
+.rsvp-premium-card textarea:focus {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.02);
+}
+
+.rsvp-premium-card textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+.rsvp-premium-card button {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(90deg, #ff4d88, #ff1f6a);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.rsvp-premium-card button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(255, 77, 136, 0.35);
+}
+
+.rsvp-footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+  opacity: 0.75;
+}

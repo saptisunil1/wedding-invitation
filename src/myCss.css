@@ -84,7 +84,8 @@ body {
 
 .text-overlay,
 .text-overlay1,
-.text-overlay2 {
+.text-overlay2,
+.text-overlay3 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -104,6 +105,10 @@ body {
 
 .text-overlay1 {
   top: 0%;
+}
+
+.text-overlay3{
+  top: 10%;
 }
 
 .p1 {

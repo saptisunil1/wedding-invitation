@@ -3,6 +3,7 @@ import "../App.css";
 import "@fontsource/great-vibes";
 import { FaLongArrowAltUp } from "react-icons/fa";
 import { useRef } from "react";
+import RSVPForm from "./rsvpForm";
 
 function Page4text({ onSwipeUp, onSwipeDown }) {
     const startY = useRef(0);
@@ -28,8 +29,9 @@ function Page4text({ onSwipeUp, onSwipeDown }) {
 
     return (
         <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} style={{ touchAction: "none" }}>
-            <div className="text-overlay1">
+            <div className="text-overlay3">
                 <p className="p1">Be Our Guest</p>
+                <RSVPForm />
                 <p className="p1"></p>
                 <p className="p1"></p>
                 <p className="p2"></p>
