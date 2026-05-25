@@ -20,10 +20,31 @@ function RSVPForm() {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSubmitted(true);
+    const handleSubmit = async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (!form.name) return;
+
+    const payload = {
+      name: form.name,
+      guests: form.guests,
+      message: form.message,
     };
+
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbx6kY3erlST7X_C6AGb7pMJV7W2Mn0WlOPjAnz8PAKnva_g4DjnuE3Gc5SlRzrc3bWD/exe", {
+        method: "POST",
+        body: JSON.stringify(payload),
+      });
+
+      setSubmitted(true);
+    } catch (err) {
+      console.log("Error saving RSVP:", err);
+      alert("Something went wrong!");
+    }
+  };
+
 
     const daysLeft = getDaysLeft();
 
@@ -71,7 +92,6 @@ function RSVPForm() {
                     </>
                 ) : (
                     <>
-                        {/* SUCCESS STATE */}
                         <div className="rsvp-success">
 
                             <h1>Thank You 💍</h1>
