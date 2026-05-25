@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import "../counter.css";
 
 function Countdown() {
-  const weddingDate = new Date("2026-11-19T00:00:00");
-
   const [timeLeft, setTimeLeft] = useState({
     months: 0,
     days: 0,
