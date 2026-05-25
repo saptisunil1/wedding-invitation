@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "../rsvp.css";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "./firebase";
 
 function getDaysLeft() {
     const weddingDate = new Date("2026-11-19T00:00:00");
@@ -21,29 +23,23 @@ function RSVPForm() {
     };
 
     const handleSubmit = async (e) => {
-    e.preventDefault();
-    e.stopPropagation();
+        e.preventDefault();
 
-    if (!form.name) return;
+        try {
+            await addDoc(collection(db, "rsvps"), {
+                name: form.name,
+                guests: form.guests,
+                message: form.message,
+                createdAt: serverTimestamp()
+            });
 
-    const payload = {
-      name: form.name,
-      guests: form.guests,
-      message: form.message,
+            setSubmitted(true);
+
+        } catch (err) {
+            console.error("Error saving RSVP:", err);
+            alert("Something went wrong. Try again.");
+        }
     };
-
-    try {
-      await fetch("https://script.google.com/macros/s/AKfycbx6kY3erlST7X_C6AGb7pMJV7W2Mn0WlOPjAnz8PAKnva_g4DjnuE3Gc5SlRzrc3bWD/exec", {
-        method: "POST",
-        body: JSON.stringify(payload),
-      });
-
-      setSubmitted(true);
-    } catch (err) {
-      console.log("Error saving RSVP:", err);
-      alert("Something went wrong!");
-    }
-  };
 
 
     const daysLeft = getDaysLeft();
