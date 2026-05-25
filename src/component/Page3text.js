@@ -4,23 +4,24 @@ import "@fontsource/great-vibes";
 import { useRef } from "react";
 import { BsCalendarDateFill } from "react-icons/bs";
 import { FaLongArrowAltUp } from "react-icons/fa";
-import { IoLocation } from "react-icons/io5"
+import { IoLocation } from "react-icons/io5";
 
 function Page3text({ onSwipeDown, onSwipeUp }) {
     const startY = useRef(0);
     const currentY = useRef(0);
-    const isTouchingButton = useRef(false);
 
     const handleTouchStart = (e) => {
         startY.current = e.touches[0].clientY;
+        currentY.current = e.touches[0].clientY;
     };
 
     const handleTouchMove = (e) => {
         currentY.current = e.touches[0].clientY;
     };
 
-    const handleTouchEnd = () => {
-        if (isTouchingButton.current) return;
+    const handleTouchEnd = (e) => {
+        // ❌ Ignore swipe logic if user interacted with a button/link
+        if (e.target.closest("button")) return;
 
         const diff = startY.current - currentY.current;
 
@@ -34,22 +35,29 @@ function Page3text({ onSwipeDown, onSwipeUp }) {
     };
 
     return (
-        <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+        <div
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
             <div className="text-overlay1">
                 <p className="p9">Ceremony</p>
+
                 <p>
                     <BsCalendarDateFill size={60} color="white" />
                 </p>
+
                 <p className="p12">November 19, 2026</p>
                 <p className="p11">11:30 am</p>
+
                 <p>
                     <IoLocation size={60} color="white" />
                 </p>
+
                 <p className="p10">Kurumboor Mana</p>
+
                 <button
                     className="location-btn"
-                    onTouchStart={() => (isTouchingButton.current = true)}
-                    onTouchEnd={() => (isTouchingButton.current = false)}
                     onClick={(e) => {
                         e.stopPropagation();
 
@@ -62,6 +70,7 @@ function Page3text({ onSwipeDown, onSwipeUp }) {
                     Location Map
                 </button>
             </div>
+
             <div className="swipe-up">
                 <span className="swipe-text">Swipe up</span>
                 <span className="swipe-arrow">
