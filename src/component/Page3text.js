@@ -29,7 +29,7 @@ function Page3text({ onSwipeDown, onSwipeUp }) {
     };
 
     return (
-        <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} style={{ touchAction: "none" }}>
+        <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} style={{ touchAction: "pan-y" }}>
             <div className="text-overlay1">
                 <p className="p9">Ceremony</p>
                 <p>
