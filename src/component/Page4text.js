@@ -9,16 +9,25 @@ function Page4text({ onSwipeUp, onSwipeDown }) {
     const startY = useRef(0);
     const currentY = useRef(0);
 
+    const isInteractive = (target) => {
+        return target.closest("input, textarea, select, button, label, form");
+    };
+
     const handleTouchStart = (e) => {
         startY.current = e.touches[0].clientY;
+        currentY.current = e.touches[0].clientY;
     };
 
     const handleTouchMove = (e) => {
         currentY.current = e.touches[0].clientY;
     };
 
-    const handleTouchEnd = () => {
+    const handleTouchEnd = (e) => {
+        if (isInteractive(e.target)) return;
+
         const diff = startY.current - currentY.current;
+
+        if (Math.abs(diff) < 60) return;
 
         if (diff > 60) {
             onSwipeUp?.();
@@ -28,7 +37,11 @@ function Page4text({ onSwipeUp, onSwipeDown }) {
     };
 
     return (
-        <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+        <div
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
             <div className="text-overlay3">
                 <RSVPForm />
             </div>
