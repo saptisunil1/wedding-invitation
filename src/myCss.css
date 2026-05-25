@@ -349,21 +349,18 @@ body {
   overflow: hidden;
 }
 
-/* swipe only background layer */
 .swipe-layer {
   position: absolute;
   inset: 0;
   z-index: 1;
 }
 
-/* UI always above swipe */
 .ui-layer {
   position: absolute;
   inset: 0;
   z-index: 10;
 }
 
-/* allow clicks only on UI */
 .ui-layer {
   pointer-events: none;
 }
