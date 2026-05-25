@@ -90,3 +90,41 @@
   margin-top: 10px;
   opacity: 0.75;
 }
+
+.rsvp-success {
+  text-align: center;
+  color: white;
+}
+
+.rsvp-success h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.rsvp-love {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.rsvp-count {
+  margin: 20px 0;
+}
+
+.rsvp-count span {
+  font-size: 42px;
+  font-weight: 600;
+  color: #ff4d88;
+}
+
+.rsvp-count p {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.rsvp-final {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.85;
+}

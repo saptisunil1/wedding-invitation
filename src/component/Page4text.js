@@ -30,11 +30,11 @@ function Page4text({ onSwipeUp, onSwipeDown }) {
     return (
         <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} style={{ touchAction: "none" }}>
             <div className="text-overlay3">
-                <p className="p1">Be Our Guest</p>
+                {/* <p className="p1">Be Our Guest</p> */}
                 <RSVPForm />
+                {/* <p className="p1"></p>
                 <p className="p1"></p>
-                <p className="p1"></p>
-                <p className="p2"></p>
+                <p className="p2"></p> */}
             </div>
 
             <div className="swipe-up">
