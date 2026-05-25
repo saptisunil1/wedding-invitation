@@ -13,7 +13,7 @@ function Countdown() {
   useEffect(() => {
     const update = () => {
       const now = new Date();
-      let diff = weddingDate - now;
+      let diff = new Date("2026-11-19T00:00:00") - now;
 
       if (diff <= 0) {
         setTimeLeft({ months: 0, days: 0, hours: 0 });
