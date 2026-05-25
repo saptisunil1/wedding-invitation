@@ -5,6 +5,7 @@ import pik7 from "../images/pik7.jpeg";
 import { Carousel } from "react-bootstrap";
 import "../App.css";
 import "@fontsource/alegreya";
+import Countdown from "./countdown";
 
 function StartPageCarousel({ onStart }) {
     return (
@@ -23,6 +24,7 @@ function StartPageCarousel({ onStart }) {
                 </Carousel.Item>
             </Carousel>
             <button className="start-btn" onClick={onStart}>Start</button>
+            <Countdown />
         </div>
     );
 }
