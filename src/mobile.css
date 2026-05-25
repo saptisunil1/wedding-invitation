@@ -1,0 +1,84 @@
+.pink-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #2a0015, #5a0033, #ff4d88);
+    color: white;
+    text-align: center;
+
+    padding: 20px;
+}
+
+.pink-card {
+    max-width: 340px;
+    padding: 30px 20px;
+
+    border-radius: 22px;
+
+    background: rgba(255, 182, 193, 0.08);
+    /* soft pink glass */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 182, 193, 0.25);
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+}
+
+.pink-logo {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 2px solid #ffb6c1;
+    margin-bottom: 15px;
+}
+
+.pink-title {
+    font-family: "Great Vibes", cursive;
+    font-size: 38px;
+
+    color: #ffb6c1;
+    margin: 10px 0;
+}
+
+.pink-subtitle {
+    font-family: "Alegreya", serif;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.pink-divider {
+    width: 70px;
+    height: 1px;
+    background: #ffb6c1;
+    margin: 15px auto;
+    opacity: 0.6;
+}
+
+.pink-text {
+    font-family: "Alegreya", serif;
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 15px;
+}
+
+.qr-box-pink {
+    background: white;
+    padding: 12px;
+    border-radius: 14px;
+
+    display: inline-block;
+
+    border: 2px solid #ffb6c1;
+}
+
+.pink-note {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #ffb6c1;
+    opacity: 0.9;
+}
