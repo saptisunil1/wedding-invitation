@@ -33,7 +33,7 @@ function RSVPForm() {
     };
 
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbx6kY3erlST7X_C6AGb7pMJV7W2Mn0WlOPjAnz8PAKnva_g4DjnuE3Gc5SlRzrc3bWD/exe", {
+      await fetch("https://script.google.com/macros/s/AKfycbx6kY3erlST7X_C6AGb7pMJV7W2Mn0WlOPjAnz8PAKnva_g4DjnuE3Gc5SlRzrc3bWD/exec", {
         method: "POST",
         body: JSON.stringify(payload),
       });
