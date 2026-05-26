@@ -107,7 +107,7 @@ body {
   top: 0%;
 }
 
-.text-overlay3{
+.text-overlay3 {
   top: 10%;
 }
 
@@ -349,6 +349,12 @@ body {
   cursor: pointer;
   pointer-events: auto;
   animation: bounce 1.8s infinite;
+  filter: drop-shadow(0 0 2px white);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-icon:active {
+  transform: scale(0.9);
 }
 
 .text-overlay4 {
@@ -363,7 +369,7 @@ body {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -393,6 +399,13 @@ body {
 }
 
 @keyframes pop {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
