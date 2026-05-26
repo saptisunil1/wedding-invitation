@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { BsCalendarDateFill } from "react-icons/bs";
 import { FaLongArrowAltUp } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
+import { SiGooglecalendar } from "react-icons/si";
 
 function Page3text({ onSwipeDown, onSwipeUp }) {
     const startY = useRef(0);
@@ -54,20 +55,29 @@ function Page3text({ onSwipeDown, onSwipeUp }) {
                 </p>
 
                 <p className="p10">Kurumboor Mana, Guruvayur</p>
-
-                <button
-                    className="location-btn"
-                    onClick={(e) => {
-                        e.stopPropagation();
-
-                        window.open(
-                            "https://www.google.com/maps/search/?api=1&query=Kurumboor+Mana+Nalukettu+Veedu+Guruvayur+Wedding+Police+Station+Police+Quarters+Rd+Chavakkad+Kerala+680506",
-                            "_blank"
-                        );
-                    }}
-                >
-                    Location Map
-                </button>
+                <div className="action-buttons">
+                    <button
+                        className="location-btn"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            window.open(
+                                "https://www.google.com/maps/search/?api=1&query=Kurumboor+Mana+Nalukettu+Veedu+Guruvayur+Wedding+Police+Station+Police+Quarters+Rd+Chavakkad+Kerala+680506",
+                                "_blank"
+                            );
+                        }}
+                    >
+                        Location Map
+                    </button>
+                    <button className="calendar-btn-premium"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            window.open("https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Nithin%20and%20Sapti&dates=20261119T113000/20261119T143000&details=Wedding%20Ceremony%20of%20Nithin%20and%20Sapti%20💍%20We%20would%20love%20your%20presence&location=Kurumboor%20Mana%2C%20Guruvayur%2C%20Kerala",
+                                "_blank");
+                        }}
+                    >
+                        <SiGooglecalendar className="google-icon" size={20} /> Add to calendar
+                    </button>
+                </div>
             </div>
 
             <div className="swipe-up">
