@@ -60,7 +60,7 @@ body {
     max-width: none;
   }
 }
-
+/* 
 .start-btn {
   position: absolute;
   top: 50%;
@@ -80,6 +80,51 @@ body {
 
 .start-btn:hover {
   background: rgba(255, 255, 255, 0.3);
+} */
+
+.start-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  /* border: 2px solid rgba(255, 255, 255, 0.8); */
+  /* background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px); */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 1.8s infinite;
+  transition: all 0.5 ease;
+}
+
+.start-btn:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.start-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* IMPORTANT */
+  border-radius: 50%;
+}
+
+/* 💓 pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
 }
 
 .text-overlay,

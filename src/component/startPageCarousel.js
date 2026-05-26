@@ -6,6 +6,7 @@ import { Carousel } from "react-bootstrap";
 import "../App.css";
 import "@fontsource/alegreya";
 import Countdown from "./countdown";
+import logopik from "../images/logoSN.jpeg";
 
 function StartPageCarousel({ onStart }) {
     return (
@@ -23,7 +24,11 @@ function StartPageCarousel({ onStart }) {
                     <img className="responsive-img" src={pik7} alt="Slide 3" />
                 </Carousel.Item>
             </Carousel>
-            <button className="start-btn" onClick={onStart}>Start</button>
+            {/* <button className="start-btn" onClick={onStart}>Start</button> */}
+
+            <button className="start-btn" onClick={onStart}>
+                <img src={logopik} alt="Open" className="start-logo" />
+            </button>
             <Countdown />
         </div>
     );
