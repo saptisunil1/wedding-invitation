@@ -43,7 +43,8 @@
 }
 
 .rsvp-premium-card input,
-.rsvp-premium-card textarea {
+.rsvp-premium-card textarea,
+.rsvp-fields select {
   width: 100%;
   padding: 12px 14px;
   border-radius: 14px;

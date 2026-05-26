@@ -38,7 +38,6 @@ function RSVPForm() {
 
         setErrors(newErrors);
 
-        // 🚫 Stop if errors exist
         if (Object.keys(newErrors).length > 0) return;
 
         try {
@@ -46,6 +45,7 @@ function RSVPForm() {
                 name: form.name.trim(),
                 guests: Number(form.guests),
                 message: form.message.trim(),
+                attending: form.attending, 
                 createdAt: serverTimestamp()
             });
 
@@ -91,6 +91,16 @@ function RSVPForm() {
                                     min={1}
                                 />
                                 {errors.guests && <p className="rsvp-error">{errors.guests}</p>}
+
+                                <select
+                                    name="attending"
+                                    value={form.attending}
+                                    onChange={handleChange}
+                                >
+                                    <option value="wedding"> Wedding </option>
+                                    <option value="reception"> Reception </option>
+                                    <option value="Both"> Wedding and Reception (both) </option>
+                                </select>
 
                                 <textarea
                                     name="message"
