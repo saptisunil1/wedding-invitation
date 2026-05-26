@@ -49,10 +49,11 @@ function Page1() {
         setIsPlaying(!isPlaying);
     };
 
-    // 💬 WhatsApp links (REPLACE WITH REAL NUMBERS)
+    const msg1 = "Hello Sapti, I am Nithin's"
+    const msg2 = "Hey Nithin, I am Sapti's"
     const whatsappLinks = {
-        sapti: "https://wa.me/447868325607?text=hello%20sapti%20i%20m%20nithin%27s",
-        nithinraj:  "https://wa.me/447442014234?text=hello%nithin%20i%20m%sapti%27s"
+        sapti: `https://wa.me/447868325607?text=${encodeURIComponent(msg1)}`,
+        nithinraj: `https://wa.me/447442014234?text=${encodeURIComponent(msg2)}`
     };
 
     const openWhatsApp = (person) => {
