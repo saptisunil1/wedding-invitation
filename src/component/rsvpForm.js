@@ -33,7 +33,7 @@ function RSVPForm() {
         }
 
         if (!form.guests || Number(form.guests) <= 0) {
-            newErrors.guests = "Please enter valid number of guests 💖";
+            newErrors.guests = "number of guests attending is required 💖";
         }
 
         setErrors(newErrors);
