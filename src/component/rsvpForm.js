@@ -79,7 +79,6 @@ function RSVPForm() {
                                     placeholder="Full Name"
                                     value={form.name}
                                     onChange={handleChange}
-                                    required
                                 />
                                 {errors.name && <p className="rsvp-error">{errors.name}</p>}
 
@@ -89,7 +88,6 @@ function RSVPForm() {
                                     placeholder="Number of Guests"
                                     value={form.guests}
                                     onChange={handleChange}
-                                    required
                                     min={1}
                                 />
                                 {errors.guests && <p className="rsvp-error">{errors.guests}</p>}
