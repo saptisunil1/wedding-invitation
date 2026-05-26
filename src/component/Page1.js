@@ -10,6 +10,7 @@ import Page2text from "./Page2text";
 import Page4text from "./Page4text";
 import Page5text from "./Page5text";
 import song from "../images/song.mp3";
+import Page6text from "./Page6text";
 
 function Page1() {
     const [page, setPage] = useState(0);
@@ -86,16 +87,23 @@ function Page1() {
             )}
 
             {page === 3 && (
-                <Page4text
+                <Page6text
                     onSwipeDown={() => setPage(2)}
                     onSwipeUp={() => setPage(4)}
                 />
             )}
 
             {page === 4 && (
-                <Page5text
+                <Page4text
                     onSwipeDown={() => setPage(3)}
                     onSwipeUp={() => setPage(5)}
+                />
+            )}
+
+            {page === 5 && (
+                <Page5text
+                    onSwipeDown={() => setPage(4)}
+                    onSwipeUp={() => setPage(6)}
                 />
             )}
 

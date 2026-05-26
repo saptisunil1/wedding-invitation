@@ -2,11 +2,11 @@ import "../myCss.css";
 import "@fontsource/alegreya";
 import "@fontsource/great-vibes";
 import { useRef } from "react";
-import { BsCalendarDateFill } from "react-icons/bs";
+import { BsFillCalendarHeartFill } from "react-icons/bs";
 import { FaLongArrowAltUp } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
 
-function Page3text({ onSwipeDown, onSwipeUp }) {
+function Page6text({ onSwipeDown, onSwipeUp }) {
     const startY = useRef(0);
     const currentY = useRef(0);
 
@@ -41,27 +41,25 @@ function Page3text({ onSwipeDown, onSwipeUp }) {
             onTouchEnd={handleTouchEnd}
         >
             <div className="text-overlay1">
-                <p className="p9">Marriage 💖</p>
+                <p className="p9">Reception 💖</p>
                 <p>
-                    <BsCalendarDateFill size={60} color="white" />
+                    <BsFillCalendarHeartFill size={60} color="white" />
                 </p>
 
-                <p className="p12">November 19, 2026</p>
-                <p className="p11">11:30 am</p>
+                <p className="p12">November 21 ,2026</p>
+                <p className="p11">05:00 pm</p>
 
                 <p>
                     <IoLocation size={60} color="white" />
                 </p>
 
-                <p className="p10">Kurumboor Mana, Guruvayur</p>
+                <p className="p10">Crystal Convention Center, Trivandrum</p>
 
-                <button
-                    className="location-btn"
+                <button className="location-btn"
                     onClick={(e) => {
                         e.stopPropagation();
-
                         window.open(
-                            "https://www.google.com/maps/search/?api=1&query=Kurumboor+Mana+Nalukettu+Veedu+Guruvayur+Wedding+Police+Station+Police+Quarters+Rd+Chavakkad+Kerala+680506",
+                            "https://www.google.com/maps/place/Crystal+Convention+Centre/@8.7346436,76.84724,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05c25fd0073c3b:0x4c2cdfb742a5de78!8m2!3d8.7346383!4d76.8498149!16s%2Fg%2F11byx83jxg?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D",
                             "_blank"
                         );
                     }}
@@ -80,4 +78,4 @@ function Page3text({ onSwipeDown, onSwipeUp }) {
     );
 }
 
-export default Page3text;
+export default Page6text;
