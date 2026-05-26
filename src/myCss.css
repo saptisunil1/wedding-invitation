@@ -333,6 +333,24 @@ body {
   pointer-events: auto;
 }
 
+.whatsapp-icon {
+  position: absolute;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  right: 20px;
+  z-index: 99999;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  /* background: rgba(0, 0, 0, 0.5);
+  border: 1px solid white; */
+  cursor: pointer;
+  pointer-events: auto;
+  animation: bounce 1.8s infinite;
+}
+
 .text-overlay4 {
   position: absolute;
   left: 50%;
@@ -340,4 +358,41 @@ body {
   text-align: center;
   width: 100%;
   z-index: 10;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  width: 80%;
+  max-width: 280px;
+  text-align: center;
+  animation: pop 0.2s ease;
+}
+
+.modal-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #25D366;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
