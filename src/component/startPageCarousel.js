@@ -7,8 +7,12 @@ import "../App.css";
 import "@fontsource/alegreya";
 import Countdown from "./countdown";
 import logopik from "../images/logoSN.jpeg";
+import { useState } from "react";
 
 function StartPageCarousel({ onStart }) {
+
+    const [opened, setOpened] = useState(false);
+
     return (
         <div className="carousel-wrapper">
             <Carousel interval={3000} controls={false} indicators={false} pause={false} touch={false}>
@@ -25,10 +29,14 @@ function StartPageCarousel({ onStart }) {
                 </Carousel.Item>
             </Carousel>
             {/* <button className="start-btn" onClick={onStart}>Start</button> */}
-
-            <button className="start-btn" onClick={onStart}>
-                <img src={logopik} alt="Open" className="start-logo" />
-            </button>
+            <div className={`invite-wrapper ${opened ? "open" : ""}`}>
+                <button className="start-btn" onClick={() => {
+                    onStart()
+                    setOpened(true)
+                }}>
+                    <img src={logopik} alt="Open" className="start-logo" />
+                </button>
+            </div>
             <Countdown />
         </div>
     );
