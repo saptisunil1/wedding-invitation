@@ -12,6 +12,7 @@ function getDaysLeft() {
 
 function RSVPForm() {
     const [submitted, setSubmitted] = useState(false);
+    const [errors, setErrors] = useState({});
     const [form, setForm] = useState({
         name: "",
         guests: "",
@@ -25,11 +26,26 @@ function RSVPForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        let newErrors = {};
+
+        if (!form.name.trim()) {
+            newErrors.name = "Name is required 💖";
+        }
+
+        if (!form.guests || Number(form.guests) <= 0) {
+            newErrors.guests = "Please enter valid number of guests 💖";
+        }
+
+        setErrors(newErrors);
+
+        // 🚫 Stop if errors exist
+        if (Object.keys(newErrors).length > 0) return;
+
         try {
             await addDoc(collection(db, "rsvps"), {
-                name: form.name,
-                guests: form.guests,
-                message: form.message,
+                name: form.name.trim(),
+                guests: Number(form.guests),
+                message: form.message.trim(),
                 createdAt: serverTimestamp()
             });
 
@@ -63,7 +79,9 @@ function RSVPForm() {
                                     placeholder="Full Name"
                                     value={form.name}
                                     onChange={handleChange}
+                                    required
                                 />
+                                {errors.name && <p className="rsvp-error">{errors.name}</p>}
 
                                 <input
                                     name="guests"
@@ -71,7 +89,10 @@ function RSVPForm() {
                                     placeholder="Number of Guests"
                                     value={form.guests}
                                     onChange={handleChange}
+                                    required
+                                    min={1}
                                 />
+                                {errors.guests && <p className="rsvp-error">{errors.guests}</p>}
 
                                 <textarea
                                     name="message"

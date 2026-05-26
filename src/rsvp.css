@@ -128,3 +128,12 @@
   font-size: 14px;
   opacity: 0.85;
 }
+
+.rsvp-error {
+  color: #ff4d6d;
+  font-size: 13px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 4px;
+}
