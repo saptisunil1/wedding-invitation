@@ -4,7 +4,7 @@ import "@fontsource/great-vibes";
 import { useRef } from "react";
 import { BsFillCalendarHeartFill } from "react-icons/bs";
 import { FaLongArrowAltUp } from "react-icons/fa";
-import { IoLocation } from "react-icons/io5";
+import { ImLocation } from "react-icons/im";
 import { SiGooglecalendar } from "react-icons/si";
 
 function Page6text({ onSwipeDown, onSwipeUp }) {
@@ -51,7 +51,7 @@ function Page6text({ onSwipeDown, onSwipeUp }) {
                 <p className="p11">05:00 pm</p>
 
                 <p>
-                    <IoLocation size={60} color="white" />
+                    <ImLocation size={60} color="white" />
                 </p>
 
                 <p className="p10">Crystal Convention Center, Trivandrum</p>
