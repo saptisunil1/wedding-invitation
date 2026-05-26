@@ -60,6 +60,7 @@ body {
     max-width: none;
   }
 }
+
 /* 
 .start-btn {
   position: absolute;
@@ -110,7 +111,8 @@ body {
 .start-logo {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* IMPORTANT */
+  object-fit: cover;
+  /* IMPORTANT */
   border-radius: 50%;
 }
 
@@ -119,9 +121,11 @@ body {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
   }
+
   70% {
     box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
@@ -454,6 +458,7 @@ body {
     opacity: 1;
   }
 }
+
 .calendar-btn-premium {
   margin-top: 14px;
   padding: 12px 20px;
@@ -472,7 +477,7 @@ body {
 
 .calendar-btn-premium:hover {
   color: #fff;
-  background: linear-gradient( 135deg, rgba(212, 175, 55, 0.25), rgba(255, 215, 0, 0.15));
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(255, 215, 0, 0.15));
   border-color: #d4af37;
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
 }
@@ -485,16 +490,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px; 
-  margin-top: 15px;
+  gap: 8px;
+  margin-top: 10px;
 }
 
 .google-icon {
-  background: linear-gradient(
-    45deg,
-    #4285F4,  /* blue */
-    #34A853,  /* green */
-    #FBBC05,  /* yellow */
-    #EA4335   /* red */
-  );
+  background: linear-gradient(45deg,
+      #4285F4,
+      /* blue */
+      #34A853,
+      /* green */
+      #FBBC05,
+      /* yellow */
+      #EA4335
+      /* red */
+    );
 }
