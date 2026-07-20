@@ -42,11 +42,8 @@ function Page4text({ onSwipeUp, onSwipeDown }) {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
         >
-            <div className="text-overlay3">
-                <RSVPForm />
-            </div>
-
-             <div className="reception-swipe">
+            <RSVPForm />
+            <div className="reception-swipe">
                 <span>Swipe up</span>
                 <FaLongArrowAltUp className="reception-swipe-arrow" />
             </div>

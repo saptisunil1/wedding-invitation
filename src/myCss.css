@@ -71,17 +71,13 @@ body {
   }
 }
 
-.text-overlay2,
-.text-overlay3 {
+.text-overlay2 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   width: 100%;
   z-index: 10;
-}
-
-.text-overlay2 {
   top: 30%;
 }
 
