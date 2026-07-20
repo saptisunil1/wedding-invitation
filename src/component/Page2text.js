@@ -28,20 +28,46 @@ function Page2text({ onSwipeDown, onSwipeUp }) {
     };
 
     return (
-        <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} style={{ touchAction: "none" }}>
-            <div className="text-overlay1">
-                <p className="p8">#theSaNiStory</p>
-                <p className="p5">With Joyous hearts,</p>
-                <p className="p6">Our families</p>
-                <p className="p5">invite you to celebrate the wedding of</p>
-                <p className="p6">Nithinraj & Sapti</p>
-                <p className="p7" style={{ fontStyle: "italic" }}>on Nov 19,2026</p>
+        <div
+            className="invitation-page"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
+            <div className="invitation-page-overlay" />
+
+            <div className="invitation-content invitation-content-open">
+                <p className="invitation-hashtag">#theSaNiStory</p>
+
+                <div className="invitation-divider">
+                    <span />
+                    <span className="invitation-divider-icon">◇</span>
+                    <span />
+                </div>
+
+                <p className="invitation-intro">With joyous hearts,</p>
+
+                <p className="invitation-family">Our families</p>
+
+                <p className="invitation-copy">
+                    invite you to celebrate the wedding of
+                </p>
+
+                <h1 className="invitation-names">
+                    Nithinraj
+                    <span>&amp;</span>
+                    Sapti
+                </h1>
+
+                <div className="invitation-date-open">
+                    <span>Thursday</span>
+                    <strong>19 November 2026</strong>
+                </div>
             </div>
-            <div className="swipe-up">
-                <span className="swipe-text">Swipe up</span>
-                <span className="swipe-arrow">
-                    <FaLongArrowAltUp />
-                </span>
+
+            <div className="invitation-swipe">
+                <span>Swipe up</span>
+                <FaLongArrowAltUp className="invitation-swipe-arrow" />
             </div>
         </div>
     );

@@ -96,23 +96,61 @@ function Page1() {
 
             {/* 💬 WHATSAPP MODAL */}
             {showModal && (
-                <div className="modal-overlay" onClick={() => setShowModal(false)}>
-                    <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+                <div
+                    className="modal-overlay"
+                    onClick={() => setShowModal(false)}
+                >
+                    <div
+                        className="contact-modal"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className="contact-modal-handle" />
 
-                        <h3>Choose Contact</h3>
+                        <div className="contact-modal-header">
+                            <span className="contact-modal-label">WhatsApp</span>
+                            <h3>Choose a contact</h3>
+                            <p>Select who you would like to message.</p>
+                        </div>
 
-                        <button className="modal-btn"
-                            onClick={() => openWhatsApp("nithinraj")}
+                        <div className="contact-options">
+                            <button
+                                type="button"
+                                className="contact-option"
+                                onClick={() => openWhatsApp("nithinraj")}
+                            >
+                                <span className="contact-avatar">N</span>
+
+                                <span className="contact-details">
+                                    <span className="contact-name">Nithinraj</span>
+                                    <span className="contact-role">Groom</span>
+                                </span>
+
+                                <span className="contact-arrow">›</span>
+                            </button>
+
+                            <button
+                                type="button"
+                                className="contact-option"
+                                onClick={() => openWhatsApp("sapti")}
+                            >
+                                <span className="contact-avatar">S</span>
+
+                                <span className="contact-details">
+                                    <span className="contact-name">Sapti</span>
+                                    <span className="contact-role">Bride</span>
+                                </span>
+
+                                <span className="contact-arrow">›</span>
+                            </button>
+                        </div>
+
+                        <button
+                            type="button"
+                            className="contact-close-btn"
+                            onClick={() => setShowModal(false)}
                         >
-                            Nithinraj 💍
+                            Cancel
                         </button>
-
-                         <button  className="modal-btn"
-                            onClick={() => openWhatsApp("sapti")}
-                        >
-                            Sapti 💖
-                        </button>
-
                     </div>
                 </div>
             )}

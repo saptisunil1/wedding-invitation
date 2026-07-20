@@ -111,7 +111,7 @@ function RSVPForm() {
                             </div>
 
                             <button type="submit">
-                                Send RSVP 💖
+                                Send RSVP
                             </button>
                         </form>
                     </>

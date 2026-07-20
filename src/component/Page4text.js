@@ -46,11 +46,9 @@ function Page4text({ onSwipeUp, onSwipeDown }) {
                 <RSVPForm />
             </div>
 
-            <div className="swipe-up">
-                <span className="swipe-text">Swipe up</span>
-                <span className="swipe-arrow">
-                    <FaLongArrowAltUp />
-                </span>
+             <div className="reception-swipe">
+                <span>Swipe up</span>
+                <FaLongArrowAltUp className="reception-swipe-arrow" />
             </div>
         </div>
     );

@@ -28,7 +28,6 @@ function StartPageCarousel({ onStart }) {
                     <img className="responsive-img" src={pik7} alt="Slide 3" />
                 </Carousel.Item>
             </Carousel>
-            {/* <button className="start-btn" onClick={onStart}>Start</button> */}
             <div className={`invite-wrapper ${opened ? "open" : ""}`}>
                 <button className="start-btn" onClick={() => {
                     onStart()

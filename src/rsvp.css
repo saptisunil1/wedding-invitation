@@ -1,140 +1,588 @@
+/* =========================================================
+   RSVP SCREEN
+   ========================================================= */
+
 .rsvp-layer {
+  position: absolute;
   inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  padding: 20px;
+  z-index: 20;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  padding:
+    max(28px, env(safe-area-inset-top))
+    18px
+    max(85px, calc(28px + env(safe-area-inset-bottom)));
   box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow-y: auto;
+  touch-action: pan-y;
+}
+
+/* Light shading only behind the form */
+.rsvp-layer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.08) 0%,
+      rgba(0, 0, 0, 0.02) 35%,
+      rgba(0, 0, 0, 0.13) 100%
+    );
 }
 
 .rsvp-premium-card {
-  width: min(360px, 92%);
-  padding: 22px 18px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.10);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-  font-family: "Alegreya", serif;
-  color: white;
+  width: min(100%, 430px);
+  padding: 28px 24px 24px;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(44, 40, 31, 0.11),
+      rgba(56, 42, 48, 0.48)
+    );
+
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 24px 65px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+  animation: rsvpCardOpen 0.45s ease;
+}
+
+.rsvp-premium-card form {
+  width: 100%;
+  margin: 0;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.rsvp-header {
+  margin-bottom: 22px;
+  text-align: center;
 }
 
 .rsvp-header h1 {
-  font-family: "Great Vibes", cursive;
-  font-size: 44px;
   margin: 0;
-  text-align: center;
+
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(45px, 12vw, 58px);
+  font-weight: 400;
+  line-height: 1;
+
+  color: #fffdf8;
+
+  text-shadow:
+    0 3px 14px rgba(0, 0, 0, 0.36);
 }
 
 .rsvp-header p {
-  text-align: center;
-  font-size: 14px;
-  opacity: 0.8;
-  margin-top: 6px;
-  margin-bottom: 18px;
+  max-width: 330px;
+  margin: 12px auto 0;
+
+  font-family: "Alegreya", serif;
+  font-size: 17px;
+  line-height: 1.4;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.28);
 }
+
+/* =========================================================
+   FORM FIELDS
+   ========================================================= */
 
 .rsvp-fields {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
-.rsvp-premium-card input,
-.rsvp-premium-card textarea,
-.rsvp-fields select {
+.rsvp-fields input,
+.rsvp-fields select,
+.rsvp-fields textarea {
   width: 100%;
-  padding: 12px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(0, 0, 0, 0.25);
-  color: white;
-  font-size: 14px;
+  min-width: 0;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+
+  font-family: "Alegreya", serif;
+  font-size: 17px;
+  line-height: 1.3;
+
   outline: none;
-  transition: 0.3s ease;
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  transition:
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.22s ease;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
-.rsvp-premium-card input:focus,
-.rsvp-premium-card textarea:focus {
-  border-color: rgba(255, 255, 255, 0.6);
-  transform: scale(1.02);
+.rsvp-fields input,
+.rsvp-fields select {
+  height: 54px;
+  padding: 0 17px;
 }
 
-.rsvp-premium-card textarea {
-  min-height: 80px;
-  resize: none;
+.rsvp-fields textarea {
+  min-height: 92px;
+  max-height: 150px;
+  padding: 15px 17px;
+
+  resize: vertical;
 }
 
-.rsvp-premium-card button {
-  width: 100%;
-  margin-top: 14px;
-  padding: 12px;
-  border-radius: 14px;
-  border: none;
-  background: linear-gradient(90deg, #ff4d88, #ff1f6a);
-  color: white;
-  font-size: 15px;
+.rsvp-fields input::placeholder,
+.rsvp-fields textarea::placeholder {
+  color: rgba(255, 255, 255, 0.58);
+  opacity: 1;
+}
+
+.rsvp-fields input:focus,
+.rsvp-fields select:focus,
+.rsvp-fields textarea:focus {
+  border-color: rgba(242, 213, 155, 0.9);
+
+  background: rgba(255, 255, 255, 0.2);
+
+  box-shadow:
+    0 0 0 3px rgba(242, 213, 155, 0.15),
+    0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.rsvp-fields input:hover,
+.rsvp-fields select:hover,
+.rsvp-fields textarea:hover {
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+/* Remove number input arrows */
+
+.rsvp-fields input[type="number"]::-webkit-inner-spin-button,
+.rsvp-fields input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.rsvp-fields input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.rsvp-fields select {
+  padding-right: 48px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
   cursor: pointer;
-  transition: 0.3s ease;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #ffffff 50%),
+    linear-gradient(135deg, #ffffff 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 20px) 23px,
+    calc(100% - 14px) 23px;
+
+  background-size:
+    6px 6px,
+    6px 6px;
+
+  background-repeat: no-repeat;
 }
 
-.rsvp-premium-card button:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 30px rgba(255, 77, 136, 0.35);
+.rsvp-fields select option {
+  background: #26231f;
+  color: #ffffff;
+
+  font-family: "Alegreya", serif;
+  font-size: 16px;
 }
 
-.rsvp-footer {
-  text-align: center;
+/* =========================================================
+   VALIDATION
+   ========================================================= */
+
+.rsvp-error {
+  margin: -6px 4px 0;
+
+  font-family: Arial, sans-serif;
   font-size: 12px;
-  margin-top: 10px;
-  opacity: 0.75;
+  line-height: 1.35;
+
+  color: #ffd4d4;
+  text-align: left;
+
+  text-shadow:
+    0 1px 5px rgba(0, 0, 0, 0.28);
 }
+
+.rsvp-fields input[aria-invalid="true"],
+.rsvp-fields select[aria-invalid="true"],
+.rsvp-fields textarea[aria-invalid="true"] {
+  border-color: rgba(255, 155, 155, 0.92);
+
+  box-shadow:
+    0 0 0 3px rgba(255, 100, 100, 0.12);
+}
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.rsvp-premium-card form > button[type="submit"] {
+  width: 100%;
+  min-height: 56px;
+  margin-top: 18px;
+  padding: 12px 20px;
+
+  border: 1px solid rgba(255, 239, 205, 0.9);
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7e4bd 0%,
+      #e5c47f 50%,
+      #cfa255 100%
+    );
+
+  color: #332414;
+
+  font-family: "Alegreya", serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 26px rgba(55, 37, 12, 0.26),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.rsvp-premium-card form > button[type="submit"]:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.04);
+
+  box-shadow:
+    0 14px 32px rgba(55, 37, 12, 0.32),
+    inset 0 1px 1px rgba(255, 255, 255, 0.65);
+}
+
+.rsvp-premium-card form > button[type="submit"]:active {
+  transform: scale(0.985);
+}
+
+.rsvp-premium-card form > button[type="submit"]:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.56);
+  outline-offset: 3px;
+}
+
+.rsvp-premium-card form > button[type="submit"]:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+  transform: none;
+  filter: grayscale(0.2);
+}
+
+/* =========================================================
+   SUCCESS VIEW
+   ========================================================= */
 
 .rsvp-success {
+  min-height: 390px;
+  padding: 12px 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   text-align: center;
-  color: white;
 }
 
 .rsvp-success h1 {
+  margin: 0;
+
   font-family: "Great Vibes", cursive;
-  font-size: 42px;
-  margin-bottom: 10px;
+  font-size: clamp(48px, 13vw, 62px);
+  font-weight: 400;
+  line-height: 1;
+
+  color: #fffdf8;
+
+  text-shadow:
+    0 3px 14px rgba(0, 0, 0, 0.34);
 }
 
 .rsvp-love {
-  font-size: 14px;
-  opacity: 0.85;
-  margin-bottom: 20px;
+  max-width: 320px;
+  margin: 17px auto 0;
+
+  font-family: "Alegreya", serif;
+  font-size: 18px;
+  line-height: 1.45;
+
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .rsvp-count {
-  margin: 20px 0;
+  width: min(100%, 250px);
+  margin: 25px auto 20px;
+  padding: 18px;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(242, 213, 155, 0.55);
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .rsvp-count span {
-  font-size: 42px;
+  display: block;
+
+  font-family: "Alegreya", serif;
+  font-size: 52px;
   font-weight: 600;
-  color: #ff4d88;
+  line-height: 1;
+
+  color: #f3d595;
 }
 
 .rsvp-count p {
-  font-size: 13px;
-  opacity: 0.8;
+  margin: 7px 0 0;
+
+  font-family: "Alegreya", serif;
+  font-size: 15px;
+  line-height: 1.3;
+
+  color: rgba(255, 255, 255, 0.76);
 }
 
 .rsvp-final {
-  margin-top: 15px;
-  font-size: 14px;
-  opacity: 0.85;
+  margin: 0;
+
+  font-family: "Alegreya", serif;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.4;
+
+  color: #f3dca9;
 }
 
-.rsvp-error {
-  color: #ff4d6d;
-  font-size: 13px;
-  margin-top: -10px;
-  margin-bottom: 10px;
-  text-align: left;
-  padding-left: 4px;
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes rsvpCardOpen {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   TABLET / DESKTOP
+   ========================================================= */
+
+@media (min-width: 600px) {
+  .rsvp-layer {
+    padding-inline: 28px;
+  }
+
+  .rsvp-premium-card {
+    padding: 32px 30px 28px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE DEVICES
+   ========================================================= */
+
+@media (max-width: 390px) {
+  .rsvp-layer {
+    padding-inline: 12px;
+  }
+
+  .rsvp-premium-card {
+    padding: 23px 17px 19px;
+    border-radius: 23px;
+  }
+
+  .rsvp-header {
+    margin-bottom: 18px;
+  }
+
+  .rsvp-header h1 {
+    font-size: 45px;
+  }
+
+  .rsvp-header p {
+    font-size: 15px;
+  }
+
+  .rsvp-fields {
+    gap: 10px;
+  }
+
+  .rsvp-fields input,
+  .rsvp-fields select {
+    height: 50px;
+    padding-left: 14px;
+    font-size: 16px;
+  }
+
+  .rsvp-fields textarea {
+    min-height: 82px;
+    padding: 13px 14px;
+    font-size: 16px;
+  }
+
+  .rsvp-premium-card form > button[type="submit"] {
+    min-height: 52px;
+    margin-top: 14px;
+    font-size: 17px;
+  }
+}
+
+/* =========================================================
+   SHORT MOBILE SCREENS
+   ========================================================= */
+
+@media (max-height: 720px) {
+  .rsvp-layer {
+    align-items: flex-start;
+
+    padding-top:
+      max(16px, env(safe-area-inset-top));
+
+    padding-bottom:
+      max(72px, calc(18px + env(safe-area-inset-bottom)));
+  }
+
+  .rsvp-premium-card {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+
+  .rsvp-header {
+    margin-bottom: 15px;
+  }
+
+  .rsvp-header h1 {
+    font-size: 43px;
+  }
+
+  .rsvp-header p {
+    margin-top: 7px;
+    font-size: 14px;
+  }
+
+  .rsvp-fields {
+    gap: 9px;
+  }
+
+  .rsvp-fields input,
+  .rsvp-fields select {
+    height: 47px;
+  }
+
+  .rsvp-fields textarea {
+    min-height: 72px;
+    max-height: 100px;
+  }
+
+  .rsvp-premium-card form > button[type="submit"] {
+    min-height: 49px;
+    margin-top: 12px;
+  }
+
+  .rsvp-success {
+    min-height: 330px;
+  }
+}
+
+/* =========================================================
+   VERY SHORT SCREENS
+   ========================================================= */
+
+@media (max-height: 630px) {
+  .rsvp-header h1 {
+    font-size: 38px;
+  }
+
+  .rsvp-header p {
+    display: none;
+  }
+
+  .rsvp-premium-card {
+    padding-top: 16px;
+  }
+
+  .rsvp-fields input,
+  .rsvp-fields select {
+    height: 43px;
+  }
+
+  .rsvp-fields textarea {
+    min-height: 60px;
+  }
 }

@@ -27,19 +27,43 @@ function Page1text({ onSwipeUp, onSwipeDown }) {
     };
 
     return (
-        <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} style={{ touchAction: "none" }}>
-            <div className="text-overlay">
-                <p className="p1">Nithinraj</p>
-                <p className="p1">&</p>
-                <p className="p1">Sapti</p>
-                <p className="p2">Are Getting Married</p>
+        <div
+            className="cover-page"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
+            <div className="cover-page-overlay" />
+
+            <div className="cover-content">
+                <p className="cover-small-text">Together with their families</p>
+
+                <div className="cover-divider">
+                    <span />
+                    <span className="cover-divider-symbol">◇</span>
+                    <span />
+                </div>
+
+                <h1 className="cover-couple-names">
+                    <span>Nithinraj</span>
+
+                    <span className="cover-ampersand">&amp;</span>
+
+                    <span>Sapti</span>
+                </h1>
+
+                <p className="cover-wedding-text">Are Getting Married</p>
+
+                <div className="cover-date">
+                    <span>19</span>
+                    <small>November</small>
+                    <span>2026</span>
+                </div>
             </div>
 
-            <div className="swipe-up">
-                <span className="swipe-text">Swipe up</span>
-                <span className="swipe-arrow">
-                    <FaLongArrowAltUp size={30} color="white" />
-                </span>
+            <div className="cover-swipe">
+                <span>Swipe up</span>
+                <FaLongArrowAltUp className="cover-swipe-arrow" />
             </div>
         </div>
     );

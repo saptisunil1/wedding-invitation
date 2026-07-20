@@ -17,20 +17,10 @@ body {
 .carousel-wrapper {
   position: relative;
   width: 100vw;
-  /*100% */
   height: 100vh;
   height: 100dvh;
   overflow: hidden;
   touch-action: none;
-}
-
-.bordered-img {
-  border: 5px solid white;
-  border-radius: 4px;
-  width: 90%;
-  max-width: 350px;
-  /*width: min(90%, 350px); */
-  height: auto;
 }
 
 .bg-desktop-black {
@@ -42,7 +32,6 @@ body {
   border-radius: 4px;
   max-width: 350px;
   width: 90%;
-  /* 100% */
   height: auto;
 }
 
@@ -59,54 +48,6 @@ body {
     border: none;
     max-width: none;
   }
-}
-
-/* 
-.start-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  font-size: 28px;
-  color: white;
-  background: rgba(255, 255, 255, 0);
-  border: 2px solid white;
-  cursor: pointer;
-  transition: 0.3s ease;
-  font-family: "alegreya", sans-serif;
-}
-
-.start-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-} */
-
-.start-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  /* border: 2px solid rgba(255, 255, 255, 0.8); */
-  /* background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(8px); */
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  animation: pulse 1.8s infinite;
-  transition: all 0.6s ease;
-  transform-style: preserve-3d;
-}
-
-.start-btn:hover {
-  transform: translate(-50%, -50%) scale(1.08);
-  background: rgba(255, 255, 255, 0.15);
 }
 
 .start-logo {
@@ -130,8 +71,6 @@ body {
   }
 }
 
-.text-overlay,
-.text-overlay1,
 .text-overlay2,
 .text-overlay3 {
   position: absolute;
@@ -139,137 +78,22 @@ body {
   transform: translateX(-50%);
   text-align: center;
   width: 100%;
-  /* max-height:100% */
   z-index: 10;
-}
-
-.text-overlay {
-  top: 20%;
 }
 
 .text-overlay2 {
   top: 30%;
 }
 
-.text-overlay1 {
-  top: 5%;
-}
-
-.text-overlay3 {
-  top: 10%;
-}
-
-.p1 {
-  font-family: "Great Vibes", cursive;
-  color: white;
-  font-size: 48px;
-  margin: 5px 0;
-}
-
-.p2 {
-  font-family: "Alegreya", serif;
-  color: white;
-  font-size: 28px;
-  margin-top: 15px;
-}
-
-.p3 {
-  font-family: "Alegreya", serif;
-  color: white;
-  font-size: 30px;
-  margin-top: 15px;
-  font-style: italic;
-}
-
-.p4 {
-  font-family: "Alegreya", serif;
-  color: white;
-  font-size: 28px;
-  margin-top: 15px;
-  font-style: italic;
-}
-
-.p5 {
-  font-family: "Alegreya", serif;
-  color: white;
-  font-size: 20px;
-  margin-top: 15px;
-}
-
-.p6 {
-  font-family: "Great Vibes", cursive;
-  color: white;
-  font-size: 32px;
-  margin-top: 15px;
-}
-
-.p7 {
-  font-family: "Alegreya", serif;
-  color: white;
-  font-size: 22px;
-  margin-top: 15px;
-}
-
-.p8 {
-  font-family: "allura", serif;
-  color: white;
-  font-size: 28px;
-  margin-bottom: 50px;
-  margin-top: 15px;
-}
-
-.p9 {
-  font-family: "cormorant", serif;
-  color: white;
-  font-size: 30px;
-  margin-top: 15px;
-}
-
-.p10 {
-  font-family: "cormorant", serif;
-  color: white;
-  font-size: 25px;
-  margin-top: 15px;
-}
-
-.p11 {
-  font-family: "cormorant", serif;
-  color: white;
-  font-size: 25px;
-  margin-top: -20px;
-}
-
-.p12 {
-  font-family: "cormorant", serif;
-  color: white;
-  font-size: 25px;
-  margin-top: 15px;
-}
-
 .swipe-up {
   position: absolute;
   bottom: 40px;
-  /*  calc(20px + env(safe-area-inset-bottom)) */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 20;
-}
-
-.swipe-text {
-  font-size: 25px;
-  color: white;
-  margin-bottom: 5px;
-  font-family: "Alegreya", serif;
-}
-
-.swipe-arrow {
-  font-size: 30px;
-  color: white;
-  animation: bounce 1.2s infinite;
-  opacity: 0.9;
 }
 
 @keyframes bounce {
@@ -284,46 +108,6 @@ body {
   100% {
     transform: translateY(0);
   }
-}
-
-.page2-wrapper {
-  height: 100vh;
-  height: 100dvh;
-  background: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-}
-
-.page2-wrapper .p1 {
-  font-family: "Great Vibes", cursive;
-  font-size: 60px;
-  margin-bottom: 10px;
-}
-
-.page2-wrapper .p2 {
-  font-family: "Alegreya", serif;
-  font-size: 28px;
-  margin: 5px 0;
-}
-
-.location-btn {
-  border-radius: 10%;
-  padding: 12px 20px;
-  font-size: 20px;
-  color: white;
-  background: transparent;
-  border: 2px solid white;
-  cursor: pointer;
-  transition: 0.3s ease;
-  font-family: "alegreya", sans-serif;
-}
-
-.location-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
 }
 
 .logo-circle {
@@ -375,8 +159,6 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  /* background: rgba(0, 0, 0, 0.5);
-  border: 1px solid white; */
   cursor: pointer;
   pointer-events: auto;
 }
@@ -392,8 +174,6 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  /* background: rgba(0, 0, 0, 0.5);
-  border: 1px solid white; */
   cursor: pointer;
   pointer-events: auto;
   animation: bounce 1.8s infinite;
@@ -424,28 +204,6 @@ body {
   z-index: 999;
 }
 
-.modal-box {
-  background: white;
-  padding: 20px;
-  border-radius: 16px;
-  width: 80%;
-  max-width: 280px;
-  text-align: center;
-  animation: pop 0.2s ease;
-}
-
-.modal-btn {
-  width: 100%;
-  margin-top: 10px;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: #25D366;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
 @keyframes pop {
   from {
     transform: scale(0.8);
@@ -456,66 +214,6 @@ body {
     transform: scale(1);
     opacity: 1;
   }
-}
-
-.calendar-btn-premium {
-  margin-top: 14px;
-  padding: 12px 20px;
-  font-size: 15px;
-  letter-spacing: 1px;
-  color: #d4af37;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  border-radius: 30px;
-  backdrop-filter: blur(10px);
-  cursor: pointer;
-  font-family: "Playfair Display", serif;
-  transition: all 0.35s ease;
-  font-weight: 700;
-}
-
-.calendar-btn-premium:hover {
-  color: #fff;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(255, 215, 0, 0.15));
-  border-color: #d4af37;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
-}
-
-.calendar-btn-premium:active {
-  transform: scale(0.96);
-}
-
-.action-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.google-icon {
-  background: linear-gradient(45deg,
-      #4285F4,
-      /* blue */
-      #34A853,
-      /* green */
-      #FBBC05,
-      /* yellow */
-      #EA4335
-      /* red */
-    );
-}
-
-.invite-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.invite-wrapper.open .start-btn {
-  animation: openCard 1s ease forwards;
-  border-radius: 16px;
 }
 
 @keyframes openCard {
@@ -532,5 +230,1866 @@ body {
   100% {
     transform: rotateY(180deg) scale(3);
     opacity: 0;
+  }
+}
+
+.reception-page {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  color: white;
+  touch-action: none;
+}
+
+.reception-page-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom,
+      rgba(5, 7, 6, 0.11) 0%,
+      rgba(5, 7, 6, 0.11) 28%,
+      rgba(5, 7, 6, 0.11) 44%,
+      rgba(5, 7, 6, 0.11) 67%,
+      rgba(5, 7, 6, 0.11) 100%);
+}
+
+.reception-content {
+  position: relative;
+  z-index: 2;
+  width: min(90%, 520px);
+  height: 100%;
+  margin: 0 auto;
+  padding:
+    max(24px, env(safe-area-inset-top)) 0 calc(92px + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reception-header {
+  width: 100%;
+  text-align: center;
+}
+
+.reception-monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #e8c078;
+  font-family: "Alegreya", serif;
+  font-size: 27px;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.reception-monogram-heart {
+  font-size: 11px;
+  fill: #e8c078;
+}
+
+.reception-divider {
+  width: 150px;
+  margin: 12px auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #e8c078;
+}
+
+.reception-divider>span:first-child,
+.reception-divider>span:last-child {
+  width: 54px;
+  height: 1px;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(232, 192, 120, 0.9));
+}
+
+.reception-divider>span:last-child {
+  background: linear-gradient(to left,
+      transparent,
+      rgba(232, 192, 120, 0.9));
+}
+
+.reception-diamond {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.reception-title {
+  margin: 0;
+  font-family: "Alegreya", serif;
+  font-size: clamp(48px, 12vw, 72px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -1px;
+  color: #fffdf9;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.48);
+}
+
+.reception-subtitle {
+  margin: 15px 0 0;
+  padding: 0 12px;
+  font-family: "Alegreya", serif;
+  font-size: clamp(16px, 4.5vw, 20px);
+  line-height: 1.35;
+  color: #eccb8d;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+}
+
+.reception-details-card {
+  width: 100%;
+  margin-top: auto;
+  padding: 18px 22px;
+  box-sizing: border-box;
+  border: 1px solid rgba(218, 169, 82, 0.7);
+  border-radius: 22px;
+  background: rgba(10, 12, 10, 0.11);
+  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(13px);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.reception-detail {
+  text-align: center;
+}
+
+.reception-icon-circle {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 7px;
+  border: 1px solid rgba(232, 192, 120, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e8c078;
+  background: rgba(232, 192, 120, 0.05);
+  font-size: 19px;
+}
+
+.reception-detail-label {
+  display: block;
+  font-family: "Alegreya", serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #e8c078;
+}
+
+.reception-detail-value {
+  margin: 4px 0 0;
+  font-family: "Alegreya", serif;
+  font-size: 21px;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.reception-detail-divider {
+  width: 100%;
+  height: 1px;
+  margin: 12px 0;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(232, 192, 120, 0.35),
+      transparent);
+}
+
+.reception-venue-name {
+  margin: 4px 0 0;
+  font-family: "Alegreya", serif;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.reception-venue-location {
+  margin: 3px 0 0;
+  font-family: "Alegreya", serif;
+  font-size: 16px;
+  color: #e8c078;
+}
+
+.reception-actions {
+  width: 100%;
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.reception-action-btn {
+  min-height: 50px;
+  padding: 11px 14px;
+  border-radius: 13px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  cursor: pointer;
+  font-family: "Alegreya", serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.reception-action-btn svg {
+  flex-shrink: 0;
+  font-size: 17px;
+}
+
+.reception-location-btn {
+  border: 1px solid #e8c078;
+  color: #19130b;
+  background: linear-gradient(135deg,
+      #f5d99f,
+      #d9a84f);
+  box-shadow: 0 8px 22px rgba(218, 169, 82, 0.22);
+}
+
+.reception-calendar-btn {
+  border: 1px solid rgba(232, 192, 120, 0.8);
+  color: #f5d99f;
+  background: rgba(12, 13, 12, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.reception-action-btn:hover {
+  transform: translateY(-2px);
+}
+
+.reception-location-btn:hover {
+  box-shadow: 0 10px 28px rgba(218, 169, 82, 0.36);
+}
+
+.reception-calendar-btn:hover {
+  color: white;
+  background: rgba(232, 192, 120, 0.13);
+}
+
+.reception-action-btn:active {
+  transform: scale(0.97);
+}
+
+.reception-swipe {
+  position: absolute;
+  left: 50%;
+  bottom: calc(18px + env(safe-area-inset-bottom));
+  z-index: 5;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #edcb8c;
+  font-family: "Alegreya", serif;
+  font-size: 17px;
+  font-style: italic;
+  white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.reception-swipe-arrow {
+  margin-top: 1px;
+  font-size: 22px;
+  animation: receptionArrow 1.3s ease-in-out infinite;
+}
+
+@keyframes receptionArrow {
+
+  0%,
+  100% {
+    transform: translateY(4px);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+/* Medium-height mobile screens */
+@media (max-height: 760px) {
+  .reception-content {
+    width: min(88%, 500px);
+    padding-top: max(16px, env(safe-area-inset-top));
+    padding-bottom: calc(74px + env(safe-area-inset-bottom));
+  }
+
+  .reception-title {
+    font-size: 49px;
+  }
+
+  .reception-subtitle {
+    margin-top: 9px;
+    font-size: 16px;
+  }
+
+  .reception-details-card {
+    padding: 13px 18px;
+  }
+
+  .reception-icon-circle {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+
+  .reception-detail-divider {
+    margin: 8px 0;
+  }
+
+  .reception-detail-value,
+  .reception-venue-name {
+    font-size: 18px;
+  }
+
+  .reception-venue-location {
+    font-size: 14px;
+  }
+
+  .reception-action-btn {
+    min-height: 44px;
+    padding: 9px;
+    font-size: 13px;
+  }
+
+  .reception-swipe {
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    font-size: 15px;
+  }
+}
+
+/* Narrow mobile screens */
+@media (max-width: 390px) {
+  .reception-content {
+    width: 92%;
+  }
+
+  .reception-actions {
+    gap: 7px;
+  }
+
+  .reception-action-btn {
+    font-size: 12px;
+    padding-inline: 7px;
+  }
+
+  .reception-action-btn svg {
+    font-size: 15px;
+  }
+}
+
+@media (max-height: 650px) {
+
+  .reception-monogram,
+  .reception-divider {
+    display: none;
+  }
+
+  .reception-title {
+    font-size: 42px;
+  }
+
+  .reception-subtitle {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  .reception-details-card {
+    padding: 10px 16px;
+  }
+
+  .reception-detail-label {
+    font-size: 9px;
+  }
+
+  .reception-icon-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .reception-detail-divider {
+    margin: 6px 0;
+  }
+
+  .reception-detail-value,
+  .reception-venue-name {
+    font-size: 16px;
+  }
+
+  .reception-actions {
+    margin-top: 8px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 16px;
+  box-sizing: border-box;
+  background: rgba(10, 13, 12, 0.48);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.contact-modal {
+  width: min(100%, 420px);
+  padding: 10px 18px 18px;
+  box-sizing: border-box;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  animation: contactModalOpen 0.28s ease-out;
+}
+
+.contact-modal-handle {
+  width: 42px;
+  height: 4px;
+  margin: 0 auto 18px;
+  border-radius: 999px;
+  background: #d9ddda;
+}
+
+.contact-modal-header {
+  padding: 0 10px 18px;
+  text-align: center;
+}
+
+.contact-modal-label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1cab58;
+}
+
+.contact-modal-header h3 {
+  margin: 0;
+  font-family: "Alegreya", serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #171c19;
+}
+
+.contact-modal-header p {
+  margin: 7px 0 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #747b77;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-option {
+  width: 100%;
+  min-height: 68px;
+  padding: 11px 14px;
+  border: 1px solid #e6ebe8;
+  border-radius: 17px;
+  background: #f8faf9;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.contact-option:hover {
+  transform: translateY(-1px);
+  border-color: rgba(37, 211, 102, 0.5);
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(20, 75, 43, 0.09);
+}
+
+.contact-option:active {
+  transform: scale(0.985);
+}
+
+.contact-avatar {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #e4f8ec;
+  color: #148c47;
+  font-family: "Alegreya", serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.contact-details {
+  min-width: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.contact-name {
+  font-family: "Alegreya", serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #151a18;
+}
+
+.contact-role {
+  margin-top: 3px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #858c88;
+}
+
+.contact-arrow {
+  margin-left: auto;
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+  color: #9da39f;
+}
+
+.contact-close-btn {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 13px;
+  border: none;
+  border-radius: 14px;
+  background: transparent;
+  color: #626965;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-close-btn:hover {
+  background: #f1f4f2;
+  color: #1b211e;
+}
+
+@keyframes contactModalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (min-width: 600px) {
+  .modal-overlay {
+    align-items: center;
+  }
+}
+
+.marriage-page {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  color: white;
+  touch-action: none;
+}
+
+.marriage-page-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom,
+      rgba(11, 13, 10, 0.16) 0%,
+      rgba(11, 13, 10, 0.03) 26%,
+      rgba(11, 13, 10, 0.02) 48%,
+      rgba(11, 13, 10, 0.18) 68%,
+      rgba(11, 13, 10, 0.48) 100%);
+}
+
+.marriage-content {
+  position: relative;
+  z-index: 2;
+  width: min(90%, 500px);
+  height: 100%;
+  margin: 0 auto;
+  padding:
+    max(28px, env(safe-area-inset-top)) 0 calc(88px + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.marriage-header {
+  width: 100%;
+  text-align: center;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.55);
+}
+
+.marriage-small-title {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Alegreya", serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.marriage-title {
+  margin: 0;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(56px, 15vw, 78px);
+  font-weight: 400;
+  line-height: 1;
+  color: #fffdf8;
+}
+
+.marriage-title-divider {
+  width: 170px;
+  margin: 8px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #f1d7a0;
+}
+
+.marriage-title-divider>span:first-child,
+.marriage-title-divider>span:last-child {
+  width: 62px;
+  height: 1px;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(241, 215, 160, 0.95));
+}
+
+.marriage-title-divider>span:last-child {
+  background: linear-gradient(to left,
+      transparent,
+      rgba(241, 215, 160, 0.95));
+}
+
+.marriage-divider-icon {
+  font-size: 13px;
+}
+
+.marriage-event-card {
+  width: 100%;
+  margin-top: auto;
+  padding: 18px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 244, 219, 0.62);
+  border-radius: 22px;
+  background: rgba(52, 39, 26, 0.11);
+  -webkit-backdrop-filter: blur(11px);
+  backdrop-filter: blur(11px);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  pointer-events: auto;
+}
+
+.marriage-date-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.marriage-date-icon,
+.marriage-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(245, 216, 159, 0.8);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  color: #f5d89f;
+  font-size: 18px;
+}
+
+.marriage-date-copy {
+  min-width: 0;
+  text-align: left;
+}
+
+.marriage-label {
+  display: block;
+  margin-bottom: 3px;
+  font-family: "Alegreya", serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #f1d7a0;
+}
+
+.marriage-main-date {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: "Alegreya", serif;
+}
+
+.marriage-month,
+.marriage-year {
+  font-size: 18px;
+  color: white;
+}
+
+.marriage-day {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff3d9;
+}
+
+.marriage-card-divider {
+  width: 100%;
+  height: 1px;
+  margin: 14px 0;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(246, 220, 171, 0.42),
+      transparent);
+}
+
+.marriage-info-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 4px 0;
+}
+
+.marriage-venue-row {
+  margin-top: 10px;
+}
+
+.marriage-info-copy {
+  min-width: 0;
+  text-align: left;
+}
+
+.marriage-info-copy p {
+  margin: 0;
+  font-family: "Alegreya", serif;
+  font-size: 20px;
+  line-height: 1.2;
+  color: white;
+}
+
+.marriage-info-copy small {
+  display: block;
+  margin-top: 2px;
+  font-family: "Alegreya", serif;
+  font-size: 15px;
+  color: rgba(255, 246, 226, 0.78);
+}
+
+.marriage-actions {
+  width: 100%;
+  margin-top: 17px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.marriage-action-btn {
+  min-height: 48px;
+  padding: 10px 12px;
+  border-radius: 13px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Alegreya", serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.marriage-action-btn svg {
+  flex-shrink: 0;
+  font-size: 17px;
+}
+
+.marriage-location-btn {
+  border: 1px solid #f4daa5;
+  background: linear-gradient(135deg, #f7e4bc, #ddb66c);
+  color: #2c2115;
+  box-shadow: 0 7px 20px rgba(52, 35, 15, 0.18);
+}
+
+.marriage-calendar-btn {
+  border: 1px solid rgba(246, 220, 171, 0.8);
+  background: rgba(30, 23, 17, 0.5);
+  color: #f5dca9;
+}
+
+.marriage-action-btn:hover {
+  transform: translateY(-2px);
+}
+
+.marriage-location-btn:hover {
+  box-shadow: 0 10px 25px rgba(52, 35, 15, 0.28);
+}
+
+.marriage-calendar-btn:hover {
+  background: rgba(246, 220, 171, 0.12);
+  color: white;
+}
+
+.marriage-action-btn:active {
+  transform: scale(0.97);
+}
+
+.marriage-swipe {
+  position: absolute;
+  left: 50%;
+  bottom: calc(17px + env(safe-area-inset-bottom));
+  z-index: 20;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Alegreya", serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #f4dda9;
+  white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+  pointer-events: none;
+}
+
+.marriage-swipe-arrow {
+  margin-top: 1px;
+  font-size: 21px;
+  animation: marriageSwipeArrow 1.3s ease-in-out infinite;
+}
+
+@keyframes marriageSwipeArrow {
+
+  0%,
+  100% {
+    transform: translateY(4px);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+/* Keep global corner controls clickable */
+.music-icon,
+.whatsapp-icon {
+  z-index: 1000000;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+/* Medium-height devices */
+@media (max-height: 760px) {
+  .marriage-content {
+    width: min(88%, 480px);
+    padding-top: max(18px, env(safe-area-inset-top));
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
+  }
+
+  .marriage-small-title {
+    font-size: 11px;
+  }
+
+  .marriage-title {
+    font-size: 55px;
+  }
+
+  .marriage-event-card {
+    padding: 14px 16px;
+  }
+
+  .marriage-date-icon,
+  .marriage-info-icon {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .marriage-card-divider {
+    margin: 10px 0;
+  }
+
+  .marriage-info-copy p {
+    font-size: 18px;
+  }
+
+  .marriage-actions {
+    margin-top: 12px;
+  }
+
+  .marriage-action-btn {
+    min-height: 43px;
+    font-size: 13px;
+  }
+
+  .marriage-swipe {
+    bottom: calc(8px + env(safe-area-inset-bottom));
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 390px) {
+  .marriage-content {
+    width: 92%;
+  }
+
+  .marriage-event-card {
+    padding-inline: 14px;
+  }
+
+  .marriage-month,
+  .marriage-year {
+    font-size: 16px;
+  }
+
+  .marriage-day {
+    font-size: 31px;
+  }
+
+  .marriage-actions {
+    gap: 7px;
+  }
+
+  .marriage-action-btn {
+    padding-inline: 7px;
+    font-size: 12px;
+  }
+}
+
+/* Very short screens */
+@media (max-height: 650px) {
+
+  .marriage-small-title,
+  .marriage-title-divider {
+    display: none;
+  }
+
+  .marriage-title {
+    font-size: 46px;
+  }
+
+  .marriage-event-card {
+    padding: 11px 14px;
+  }
+
+  .marriage-card-divider {
+    margin: 7px 0;
+  }
+
+  .marriage-info-row {
+    padding: 1px 0;
+  }
+
+  .marriage-venue-row {
+    margin-top: 6px;
+  }
+
+  .marriage-date-icon,
+  .marriage-info-icon {
+    flex-basis: 31px;
+    width: 31px;
+    height: 31px;
+    font-size: 13px;
+  }
+
+  .marriage-info-copy p {
+    font-size: 16px;
+  }
+
+  .marriage-info-copy small {
+    font-size: 13px;
+  }
+
+  .marriage-actions {
+    margin-top: 8px;
+  }
+}
+
+/* =========================================================
+   OPEN / NON-BOXED INVITATION PAGE
+   ========================================================= */
+
+.invitation-page {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  color: white;
+  touch-action: none;
+  z-index: 10;
+}
+
+.invitation-page-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background:
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.13) 0%,
+      rgba(0, 0, 0, 0.03) 30%,
+      rgba(0, 0, 0, 0.05) 55%,
+      rgba(0, 0, 0, 0.28) 100%);
+}
+
+.invitation-content-open {
+  position: relative;
+  z-index: 2;
+
+  width: min(88%, 520px);
+  height: 100%;
+  margin: 0 auto;
+
+  padding:
+    max(70px, env(safe-area-inset-top)) 0 calc(100px + env(safe-area-inset-bottom));
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  pointer-events: none;
+}
+
+/* Hashtag */
+
+.invitation-hashtag {
+  margin: 0;
+
+  font-family: "Alegreya", serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  color: #f2d9a6;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Decorative divider */
+
+.invitation-divider {
+  width: 170px;
+  margin: 15px auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  color: #f2d9a6;
+}
+
+.invitation-divider>span:first-child,
+.invitation-divider>span:last-child {
+  width: 62px;
+  height: 1px;
+
+  background:
+    linear-gradient(to right,
+      transparent,
+      rgba(242, 217, 166, 0.95));
+}
+
+.invitation-divider>span:last-child {
+  background:
+    linear-gradient(to left,
+      transparent,
+      rgba(242, 217, 166, 0.95));
+}
+
+.invitation-divider-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* Main text */
+
+.invitation-intro {
+  margin: 0;
+
+  font-family: "Alegreya", serif;
+  font-size: clamp(20px, 5vw, 24px);
+  font-style: italic;
+  line-height: 1.35;
+
+  color: rgba(255, 255, 255, 0.95);
+
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.68);
+}
+
+.invitation-family {
+  margin: 14px 0 8px;
+
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(45px, 12vw, 64px);
+  font-weight: 400;
+  line-height: 1;
+
+  color: #fffdf8;
+
+  text-shadow:
+    0 4px 17px rgba(0, 0, 0, 0.62);
+}
+
+.invitation-copy {
+  max-width: 350px;
+  margin: 7px auto 0;
+
+  font-family: "Alegreya", serif;
+  font-size: clamp(16px, 4vw, 20px);
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.65);
+}
+
+/* Couple names */
+
+.invitation-names {
+  margin: 20px 0 0;
+
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(50px, 14vw, 72px);
+  font-weight: 400;
+  line-height: 1.05;
+
+  color: #fffdf8;
+
+  text-shadow:
+    0 5px 19px rgba(0, 0, 0, 0.72);
+}
+
+.invitation-names span {
+  display: block;
+  margin: 2px 0;
+
+  font-family: "Alegreya", serif;
+  font-size: 0.38em;
+  font-style: italic;
+  letter-spacing: 2px;
+
+  color: #f2d9a6;
+}
+
+/* Date without a box */
+
+.invitation-date-open {
+  margin-top: 25px;
+  padding: 11px 25px;
+
+  border-top: 1px solid rgba(242, 217, 166, 0.68);
+  border-bottom: 1px solid rgba(242, 217, 166, 0.68);
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 9px rgba(0, 0, 0, 0.62);
+}
+
+.invitation-date-open span {
+  display: block;
+  margin-bottom: 4px;
+
+  font-family: "Alegreya", serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #f2d9a6;
+}
+
+.invitation-date-open strong {
+  display: block;
+
+  font-family: "Alegreya", serif;
+  font-size: clamp(18px, 4.8vw, 22px);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  color: white;
+}
+
+/* Swipe indicator */
+
+.invitation-swipe {
+  position: absolute;
+  left: 50%;
+  bottom: calc(17px + env(safe-area-inset-bottom));
+  z-index: 20;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Alegreya", serif;
+  font-size: 16px;
+  font-style: italic;
+
+  color: #f2d9a6;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.75);
+
+  pointer-events: none;
+}
+
+.invitation-swipe-arrow {
+  margin-top: 1px;
+  font-size: 21px;
+
+  animation: invitationSwipeArrow 1.3s ease-in-out infinite;
+}
+
+@keyframes invitationSwipeArrow {
+
+  0%,
+  100% {
+    transform: translateY(4px);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+/* Keep music and WhatsApp controls active */
+
+.music-icon,
+.whatsapp-icon {
+  z-index: 1000000;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+/* Medium-height screens */
+
+@media (max-height: 760px) {
+  .invitation-content-open {
+    width: 90%;
+
+    padding-top:
+      max(42px, env(safe-area-inset-top));
+
+    padding-bottom:
+      calc(78px + env(safe-area-inset-bottom));
+  }
+
+  .invitation-divider {
+    margin-top: 10px;
+    margin-bottom: 17px;
+  }
+
+  .invitation-family {
+    margin-top: 9px;
+    font-size: 46px;
+  }
+
+  .invitation-copy {
+    font-size: 15px;
+  }
+
+  .invitation-names {
+    margin-top: 13px;
+    font-size: 52px;
+  }
+
+  .invitation-date-open {
+    margin-top: 16px;
+    padding-block: 8px;
+  }
+
+  .invitation-swipe {
+    bottom: calc(8px + env(safe-area-inset-bottom));
+    font-size: 14px;
+  }
+}
+
+/* Narrow devices */
+
+@media (max-width: 390px) {
+  .invitation-content-open {
+    width: 92%;
+  }
+
+  .invitation-hashtag {
+    font-size: 12px;
+  }
+
+  .invitation-intro {
+    font-size: 17px;
+  }
+
+  .invitation-family {
+    font-size: 41px;
+  }
+
+  .invitation-copy {
+    max-width: 290px;
+    font-size: 14px;
+  }
+
+  .invitation-names {
+    font-size: 46px;
+  }
+
+  .invitation-date-open strong {
+    font-size: 17px;
+  }
+}
+
+/* Very short screens */
+
+@media (max-height: 640px) {
+  .invitation-hashtag {
+    display: none;
+  }
+
+  .invitation-divider {
+    margin-bottom: 10px;
+  }
+
+  .invitation-intro {
+    font-size: 15px;
+  }
+
+  .invitation-family {
+    margin-top: 6px;
+    font-size: 36px;
+  }
+
+  .invitation-copy {
+    margin-top: 4px;
+    font-size: 13px;
+  }
+
+  .invitation-names {
+    margin-top: 7px;
+    font-size: 41px;
+  }
+
+  .invitation-date-open {
+    margin-top: 10px;
+    padding-block: 6px;
+  }
+}
+
+.cover-page {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  overflow: hidden;
+  color: #ffffff;
+
+  touch-action: none;
+}
+
+.cover-page-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(0, 0, 0, 0.02) 28%,
+      rgba(0, 0, 0, 0.04) 56%,
+      rgba(0, 0, 0, 0.32) 100%);
+}
+
+.cover-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(90%, 540px);
+  height: 100%;
+  margin: 0 auto;
+
+  padding:
+    max(64px, env(safe-area-inset-top)) 0 calc(100px + env(safe-area-inset-bottom));
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  pointer-events: none;
+}
+
+.cover-small-text {
+  margin: 0;
+
+  font-family: "Alegreya", serif;
+  font-size: clamp(13px, 3.5vw, 16px);
+  font-weight: 600;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+
+  color: #f2daa7;
+
+  text-shadow:
+    0 2px 9px rgba(0, 0, 0, 0.72);
+}
+
+.cover-divider {
+  width: 175px;
+  margin: 17px auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: #f2daa7;
+}
+
+.cover-divider>span:first-child,
+.cover-divider>span:last-child {
+  width: 65px;
+  height: 1px;
+
+  background:
+    linear-gradient(to right,
+      transparent,
+      rgba(242, 218, 167, 0.95));
+}
+
+.cover-divider>span:last-child {
+  background:
+    linear-gradient(to left,
+      transparent,
+      rgba(242, 218, 167, 0.95));
+}
+
+.cover-divider-symbol {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.cover-couple-names {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(64px, 18vw, 92px);
+  font-weight: 400;
+  line-height: 0.84;
+
+  color: #fffdf8;
+
+  text-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.72),
+    0 1px 2px rgba(0, 0, 0, 0.48);
+}
+
+.cover-couple-names>span {
+  display: block;
+}
+
+.cover-ampersand {
+  margin: 12px 0 10px;
+
+  font-family: "Alegreya", serif;
+  font-size: 0.36em;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+
+  color: #f2daa7;
+}
+
+.cover-wedding-text {
+  margin: 28px 0 0;
+
+  font-family: "Alegreya", serif;
+  font-size: clamp(18px, 4.8vw, 23px);
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.94);
+
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.72);
+}
+
+.cover-date {
+  margin-top: 21px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  font-family: "Alegreya", serif;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 2px 9px rgba(0, 0, 0, 0.7);
+}
+
+.cover-date::before,
+.cover-date::after {
+  content: "";
+  width: 38px;
+  height: 1px;
+
+  background: rgba(242, 218, 167, 0.78);
+}
+
+.cover-date span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cover-date small {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+
+  color: #f2daa7;
+}
+
+.cover-swipe {
+  position: absolute;
+  left: 50%;
+  bottom: calc(17px + env(safe-area-inset-bottom));
+  z-index: 20;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Alegreya", serif;
+  font-size: 16px;
+  font-style: italic;
+
+  color: #f2daa7;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.76);
+
+  pointer-events: none;
+}
+
+.cover-swipe-arrow {
+  margin-top: 1px;
+  font-size: 21px;
+
+  animation: coverSwipeArrow 1.3s ease-in-out infinite;
+}
+
+@keyframes coverSwipeArrow {
+
+  0%,
+  100% {
+    transform: translateY(4px);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+.music-icon,
+.whatsapp-icon {
+  z-index: 1000000;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+@media (max-height: 760px) {
+  .cover-content {
+    padding-top:
+      max(42px, env(safe-area-inset-top));
+
+    padding-bottom:
+      calc(78px + env(safe-area-inset-bottom));
+  }
+
+  .cover-divider {
+    margin-top: 12px;
+    margin-bottom: 18px;
+  }
+
+  .cover-couple-names {
+    font-size: 68px;
+  }
+
+  .cover-ampersand {
+    margin-block: 8px;
+  }
+
+  .cover-wedding-text {
+    margin-top: 20px;
+    font-size: 17px;
+  }
+
+  .cover-date {
+    margin-top: 15px;
+  }
+
+  .cover-swipe {
+    bottom: calc(8px + env(safe-area-inset-bottom));
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 390px) {
+  .cover-content {
+    width: 92%;
+  }
+
+  .cover-small-text {
+    font-size: 11px;
+    letter-spacing: 2.2px;
+  }
+
+  .cover-divider {
+    width: 150px;
+  }
+
+  .cover-divider>span:first-child,
+  .cover-divider>span:last-child {
+    width: 52px;
+  }
+
+  .cover-couple-names {
+    font-size: 60px;
+  }
+
+  .cover-wedding-text {
+    font-size: 15px;
+    letter-spacing: 2.6px;
+  }
+
+  .cover-date {
+    gap: 9px;
+  }
+
+  .cover-date::before,
+  .cover-date::after {
+    width: 24px;
+  }
+}
+
+
+@media (max-height: 640px) {
+
+  .cover-small-text,
+  .cover-divider {
+    display: none;
+  }
+
+  .cover-couple-names {
+    font-size: 56px;
+  }
+
+  .cover-ampersand {
+    margin-block: 6px;
+  }
+
+  .cover-wedding-text {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .cover-date {
+    margin-top: 11px;
+  }
+}
+
+
+.invite-wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.start-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  animation: logoFloat 2.8s ease-in-out infinite;
+  transition: all .4s ease;
+}
+
+.start-logo {
+  width: 150px;
+  height: 150px;
+  max-width: 45vw;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(255, 220, 140, .25));
+}
+
+.start-btn.opening {
+  animation: logoOpen .9s forwards;
+}
+
+@keyframes logoFloat {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+@keyframes logoOpen {
+
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 0px gold);
+  }
+
+  30% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 18px rgba(255, 220, 150, .8));
+  }
+
+  65% {
+    transform: scale(3) rotate(10deg);
+    opacity: .7;
+    filter: drop-shadow(0 0 45px rgba(255, 220, 150, 1));
+  }
+
+  100% {
+    transform: scale(8) rotate(18deg);
+    opacity: 0;
+    filter: blur(6px);
+  }
+
+}
+
+.invite-wrapper.open {
+  animation: wrapperFade .9s forwards;
+}
+
+@keyframes wrapperFade {
+  to {
+    opacity: 0;
+    visibility: hidden;
+
   }
 }
