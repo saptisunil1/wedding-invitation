@@ -4,7 +4,7 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "./firebase";
 
 function getDaysLeft() {
-    const weddingDate = new Date("2026-11-19T00:00:00");
+    const weddingDate = new Date("2026-11-19T11:30:00");
     const now = new Date();
     const diff = weddingDate - now;
     return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
@@ -34,6 +34,10 @@ function RSVPForm() {
 
         if (!form.guests || Number(form.guests) <= 0) {
             newErrors.guests = "number of guests attending is required 💖";
+        }
+
+        if(form.attending === undefined){
+            form.attending = "wedding";
         }
 
         setErrors(newErrors);
