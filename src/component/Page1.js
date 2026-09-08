@@ -3,9 +3,9 @@ import { Carousel } from "react-bootstrap";
 import { FaMusic } from "react-icons/fa";
 import { RiWhatsappFill } from "react-icons/ri";
 
-import pik10 from "../images/pik10.jpeg";
-import pik9 from "../images/pik9.jpeg";
-import pik3 from "../images/pik3.jpeg";
+import pik10 from "../images/mrg2.jpeg";
+import pik9 from "../images/mrg3.jpeg";
+import pik3 from "../images/mrg4.jpeg";
 import song from "../images/song.mp3";
 
 import Page1text from "./page1text";
