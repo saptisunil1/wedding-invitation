@@ -6,7 +6,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import pik4 from "../images/finalmrg4.jpeg";
 import pik5 from "../images/finalmrg5.jpeg";
 import pik6 from "../images/finalmrg6.jpeg";
-import song from "../images/song.mp3";
+import song from "../images/song.mpeg";
 
 import Page1text from "./page1text";
 import Page3text from "./Page3text";
