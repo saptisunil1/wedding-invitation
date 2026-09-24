@@ -32,7 +32,12 @@ function StartPageCarousel({ onStart }) {
                     onStart()
                     setOpened(true)
                 }}>
-                    <img src={logopik} alt="Open" className="start-logo" />
+                    <img src={logopik} alt="Tap to open wedding invitation" className="start-logo" />
+                    <div className="tap-to-open">
+                        <span className="tap-line">—</span>
+                        <span> TAP TO OPEN </span>
+                        <span className="tap-line">—</span>
+                    </div>
                 </button>
             </div>
             <Countdown />

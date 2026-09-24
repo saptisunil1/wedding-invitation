@@ -2137,3 +2137,107 @@ body {
     transition: none;
   }
 }
+
+.invite-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    perspective: 1200px;
+}
+
+/* Main button */
+.start-btn {
+    position: relative;
+
+    width: 150px;
+    height: 185px;
+
+    padding: 0;
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transform-style: preserve-3d;
+
+    animation: invitationPulse 2.2s ease-in-out infinite;
+}
+
+/* Your existing logo */
+.start-logo {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    display: block;
+
+    user-select: none;
+    -webkit-user-drag: none;
+
+    pointer-events: none;
+}
+
+/* TAP TO OPEN */
+.tap-to-open {
+    margin-top: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+
+    color: #d4af37;
+
+    font-family: "Alegreya", serif;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    font-weight: 500;
+
+    text-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.5);
+
+    pointer-events: none;
+}
+
+.tap-line {
+    font-size: 12px;
+    opacity: 0.8;
+    margin: 0 4px;
+}
+
+/* Subtle indication that the logo is clickable */
+@keyframes invitationPulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.invite-wrapper.open .start-btn {
+    animation: openInvitation 1s ease-in-out forwards;
+}
