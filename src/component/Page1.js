@@ -3,9 +3,9 @@ import { Carousel } from "react-bootstrap";
 import { FaMusic } from "react-icons/fa";
 import { RiWhatsappFill } from "react-icons/ri";
 
-import pik10 from "../images/mrg2.jpeg";
-import pik9 from "../images/mrg3.jpeg";
-import pik3 from "../images/mrg4.jpeg";
+import pik4 from "../images/finalmrg4.jpeg";
+import pik5 from "../images/finalmrg5.jpeg";
+import pik6 from "../images/finalmrg6.jpeg";
 import song from "../images/song.mp3";
 
 import Page1text from "./page1text";
@@ -73,13 +73,13 @@ function Page1() {
                 touch={false}
             >
                 <Carousel.Item>
-                    <img className="responsive-img" src={pik3} alt="Img1" />
+                    <img className="responsive-img" src={pik4} alt="Img1" />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className="responsive-img" src={pik9} alt="Img2" />
+                    <img className="responsive-img" src={pik5} alt="Img2" />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className="responsive-img" src={pik10} alt="Img3" />
+                    <img className="responsive-img" src={pik6} alt="Img3" />
                 </Carousel.Item>
             </Carousel>
 

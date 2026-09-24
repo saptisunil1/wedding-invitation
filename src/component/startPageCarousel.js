@@ -1,6 +1,7 @@
 import "../myCss.css";
-import pik1 from "../images/pik1.jpeg";
-import pik5 from "../images/mrg1.jpeg";
+import pik1 from "../images/finalmrg1.jpeg";
+import pik2 from "../images/finalmrg3.jpeg";
+import pik3 from "../images/finalmrg2.jpeg";
 import { Carousel } from "react-bootstrap";
 import "../App.css";
 import "@fontsource/alegreya";
@@ -20,7 +21,10 @@ function StartPageCarousel({ onStart }) {
                 </Carousel.Item>
 
                 <Carousel.Item>
-                    <img className="responsive-img" src={pik5} alt="Slide 2" />
+                    <img className="responsive-img" src={pik2} alt="Slide 2" />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img className="responsive-img" src={pik3} alt="Slide 3" />
                 </Carousel.Item>
             </Carousel>
             <div className={`invite-wrapper ${opened ? "open" : ""}`}>

@@ -3,7 +3,7 @@ import "../myCss.css";
 import "../App.css";
 import "@fontsource/great-vibes";
 import logopik from "../images/logoSN.jpeg";
-import final from "../images/final.jpg";
+import final from "../images/final1.jpeg";
 import { CiHeart } from "react-icons/ci";
 
 function Page5text({ onSwipeDown }) {
